@@ -2,7 +2,7 @@ batch_size: 1
 build_dir: IntrABuild
 data_state: data_state.json
 device: cuda
-graph_neighbors: 8
+graph_neighbors: 32
 metric: null
 model: null
 model_config: expigeo/model_config.yaml
