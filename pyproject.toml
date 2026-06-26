@@ -1,0 +1,16 @@
+[project]
+name = "expigeo"
+version = "0.1.0"
+description = "EXPIGEO Implementation"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.4.6",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.9.0",
+    "scipy>=1.17.1",
+    "torch>=2.12.0",
+    "torch-geometric>=2.7.0",
+    "torchmetrics>=1.9.0",
+    "tqdm>=4.67.3",
+]
