@@ -1,0 +1,9 @@
+blocks_out_channels:
+- 256
+- 256
+- 256
+dropout: 0.5
+in_channels: 9
+num_blocks: 3
+num_classes: 2
+out_channels: 256

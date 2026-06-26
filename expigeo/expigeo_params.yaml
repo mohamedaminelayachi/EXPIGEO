@@ -1,0 +1,15 @@
+K: 8
+blockage_cone_angle: 15
+dist_var_perc: 90
+gamma: 0.33
+k_neighbors: 10
+local_rgm_points: 50
+min_valid_hits: 3
+skeleton_dense_perc: 90
+skeleton_merge_factor: 0.7
+skeleton_pruning_multiplier: 0.4
+skeleton_voxel_size: 10
+smoothing_radius: 1.5
+std_multiplier: 0.03
+term_decay_sigma: 2
+theta: 10.0
