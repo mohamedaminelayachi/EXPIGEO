@@ -13,10 +13,7 @@ The automated 3D detection and segmentation of intracranial aneurysms is critica
 
 ## An Intuitive Explainer on Interior Geometry Exploration
 
-<video width="640" height="360" controls>
-  <source src="assets/EXPIGEO_Manimated.mp4" type="video/mp4">
-  An Intuitive Explainer on Interior Geometry Exploration
-</video>
+https://github.com/user-attachments/assets/256bf22a-d007-479a-b2a1-70ef4f834f42
 
 ## Visuals
 
