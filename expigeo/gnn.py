@@ -111,7 +111,6 @@ class ModelConfig:
    
     in_channels: int
     out_channels: int
-    num_blocks: int
     blocks_out_channels: list
     num_classes: int
     dropout: float
@@ -120,7 +119,6 @@ class ModelConfig:
         data = {
             'in_channels': self.in_channels,
             'out_channels': self.out_channels,
-            'num_blocks': self.num_blocks,
             'blocks_out_channels': self.blocks_out_channels,
             'num_classes': self.num_classes,
             'dropout': self.dropout
@@ -135,7 +133,6 @@ class ModelConfig:
 
       self.in_channels = config['in_channels'] if 'in_channels' in config else 9
       self.out_channels = config['out_channels'] if 'out_channels' in config else 256
-      self.num_blocks = config['num_blocks'] if 'num_blocks' in config else 3
       self.blocks_out_channels = (config['blocks_out_channels'] 
                                   if 'blocks_out_channels' in config else [256, 256, 256])
       self.num_classes = config['num_classes'] if 'num_classes' in config else 2
@@ -148,7 +145,6 @@ class ModelConfig:
 class ExpigeoGNN(nn.Module):
     def __init__(self, in_channels=9,
                  out_channels=256,
-                 num_blocks=3,
                  blocks_out_channels=[256, 256, 256],
                  num_classes=2,
                  dropout=0.5,
@@ -157,11 +153,8 @@ class ExpigeoGNN(nn.Module):
         """
         :param in_channels: number of input channels.
         :param out_channels: the size of the last graph convolution layer.
-        :param num_blocks: number of residual blocks to use.
         :param blocks_out_channels: a list of output sizes of the 
-                                    used residual blocks. The list 
-                                    size must be the same as the 
-                                    given num_blocks.
+                                    used residual blocks.
         :param num_classes: number of classes (2 by default
                             aneurysm vs healthy artery).
         :param dropout: the amount of dropout to use.
@@ -171,12 +164,10 @@ class ExpigeoGNN(nn.Module):
         if model_config:
            in_channels = model_config.in_channels
            out_channels = model_config.out_channels
-           num_blocks = model_config.num_blocks
            blocks_out_channels = model_config.blocks_out_channels
+           num_blocks = len(blocks_out_channels)
            num_classes = model_config.num_classes
            dropout = model_config.dropout
-
-        assert num_blocks == len(blocks_out_channels), "Residual Blocks Mismatch"
 
         self.res_blocks = nn.ModuleList()
 
