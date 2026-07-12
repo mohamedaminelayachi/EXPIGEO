@@ -1,5 +1,4 @@
 
-
 ![EXPIGEO Logo - White](assets/EXPIGEOLogoWhite.png)
 
 This repository contains the official implementation of EXPIGEO (pronounced [**/ˌɛksˈpɛdʒi.oʊ/**](https://ipa-reader.com/?text=%2F%CB%8C%C9%9Bks%CB%88p%C9%9Bd%CA%92i.o%CA%8A%2F)) introduced in the MICCAI 2026 paper titled "Exploiting Interior Geometry for Intracranial Aneurysm Detection and Segmentation on 3D Point Clouds via GNNs." EXPIGEO is a framework that proposes novel geometry-based techniques used to extract physiologically meaningful geometric descriptors that unlock GNNs' performance on Intracranial Aneurysm Detection and Segmentation on 3D Point Clouds.
